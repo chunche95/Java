@@ -60,6 +60,6 @@ public class Nodo<T>
    
    @Override
    public String toString(){
-       return "elemento=" + elemento;
+       return elemento+"\n";
    }
 }

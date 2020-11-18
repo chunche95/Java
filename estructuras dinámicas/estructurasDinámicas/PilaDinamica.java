@@ -66,9 +66,21 @@ public class PilaDinamica<T>
            
        
     public String toString(){
-    
+        if(isEmpty()){
+            return "La pila está vacía";
+        }else{
+            String resultado="";
+            Nodo<T> aux = top;
+            while(aux != null){
+                resultado += aux.toString();
+                aux = aux.getSiguiente();
+            }
+        }
     }
     
+    public elemento getElemento(){
+         return elemento;
+    }
     // public Nodo<T> getTop(){
         // return top;
     // }
