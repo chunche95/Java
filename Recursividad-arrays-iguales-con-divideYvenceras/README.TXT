@@ -1,12 +1,10 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
+-----------------------------------
+Comparación de arrays - Longitudes
+-----------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: Recursividad de arrays - Divide y vencerás
+PURPOSE OF PROJECT: Comparativa de arrays numeros naturales.
+VERSION or DATE:0.0
+HOW TO START THIS PROJECT: - 
+AUTHORS: Pauchino09
+USER INSTRUCTIONS: Null
