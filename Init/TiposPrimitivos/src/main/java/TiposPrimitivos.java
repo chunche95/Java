@@ -6,6 +6,8 @@
  *
  * @author pauli
  */
+
+import java.util.Scanner;
 public class TiposPrimitivos {
     public static void main(String[] args) {
         // byte / short / int / long / float / double / char / boolean
@@ -90,6 +92,50 @@ public class TiposPrimitivos {
         System.out.println(booleanVarT);
         System.out.println(booleanVarF);
         System.out.println("----------------------");
+        
+        /*
+        *
+        * CONVERSIÓN DE TIPOS PRIMITIVOS. 
+        *
+        */
+        System.out.println("\n\n*****************************************\n");
+        int edad = Integer.parseInt("22");
+        System.out.println("Edad: " +  edad);
+        
+        double valorPi = Double.parseDouble("3.1416");
+        System.out.println("Valor de PI:" +  valorPi);
+        
+        /*
+          * Tomamos los valores del índice de la palabra. Ejemplo:
+          *         H o  l  a
+          *         | |  |  |
+          *         v v  v   v
+          *         0 1 2  3
+          */
+        char c = "Hola".charAt(0);
+        System.out.println("Caracter de índice 0 es: " +  c);
+        
+        System.out.println("Escriba su edad para continuar: ");
+        Scanner suEdad = new Scanner(System.in);
+        edad = Integer.parseInt(suEdad.nextLine() );
+        System.out.println("Edad = " + edad);
+        
+        System.out.println("Ahora un caracter: ");
+        char caracter = suEdad.nextLine().charAt(0);
+        System.out.println("Caracter: " + caracter);
+        
+        String edadTexto = String.valueOf(4);
+        System.out.println("Edad en texto (String) : " +  edadTexto);
+        
+        
+        /*
+          *  Casting 
+          *    => Conversión entre tipos, en este caso un short es de 16bits
+          *    y un byte es de 8 bits
+        */
+        short s = 10;
+        byte b = (byte) s;
+        System.out.println("B = " + b);
         
     }
     
