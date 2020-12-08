@@ -17,6 +17,8 @@ public class Aritmetica {
     int b; 
     
     /*
+     * CONSTRUCTORES: inicializa un objeto cuando se crea. Tiene el mismo nombre que su clase y es sintácticamente similar a un método. Sin embargo, los constructores no tienen un tipo de devolución explícito. 
+     *
      * Constructor de la clase => Se llama igual que la clase
      * Nos sirve para inicializar las variables de nuestra clase y reservar espacion en memoria.
     */
@@ -26,13 +28,17 @@ public class Aritmetica {
         System.out.println("Ejecutando constructor vacío para reservar espacio en memoria.");
     }
     
-    public Aritmetica(int arg1 , int arg2){
-        a =  arg1;
-        b = arg2;
+    public Aritmetica(int a , int b){
+                         //    |    
+        this.a = a;  //<···+    En int a es el valor que se asignará como argumento a la variable 'this.a' del programa
+        this.b = b;
+        System.out.println("Ejecutando constructor con dos argumentos");
     }
     
     
     /*
+     * MÉTODOS: conjunto de instrucciones definidas dentro de una clase, que realizan una determinada tarea y a las que podemos invocar mediante un nombre.
+     *
      *  public int sumar(args)=> Firma del método
      *      - public => Modificador de acceso
      *      - int => Tipo de regreso
@@ -41,7 +47,15 @@ public class Aritmetica {
      *  {} => Cuerpo del método
     */
     public int sumar(){
-        int resultado = a+b;
-        return resultado;
+        return this.a+this.b;
+    }
+    public int restar(){
+        return this.a-this.b;
+    }
+    public int multiplicar(){
+        return this.a*this.b;
+    }
+    public int dividir(){
+        return this.a/this.b;
     }
 }
