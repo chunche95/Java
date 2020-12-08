@@ -6,7 +6,10 @@
  *
  * @author pauli
  */
-import com.sun.tools.jdeprscan.scan.Scan;
+import static java.lang.Math.cos;
+import static java.lang.Math.sin;
+import static java.lang.Math.tan;
+import java.util.Scanner;
 import java.util.Random;
 public class OperacionesCondicionales {
     public static void main(String[] args) {
@@ -76,18 +79,93 @@ public class OperacionesCondicionales {
         */
         System.out.println("Menú de opciones.");
         System.out.println("a. Cálcular la media de 2 asignaturas. ");
+        System.out.println("RADIANES");
         System.out.println("b. Cálculo del seno de un número. ");
-        System.out.println("c.  Cálculo del coseno de un número. ");
+        System.out.println("c. Cálculo del coseno de un número. ");
         System.out.println("d. Cálculo de la tangente de un número. ");
-        Scan valor = new Scan();
-       switch ( opcion = valor){
-           case 'a':
-               
-               
-       }
+        System.out.println("s. Salir");
+        System.out.println("Seleccione una de las opciones: ");
         
-        
-        
-        
+        Scanner str = new Scanner(System.in);
+        String opcion = str.nextLine();
+        // Convertimos la letra a minúscula.
+        opcion = opcion.toLowerCase();
+        switch(opcion)
+        {
+            // Sé que es redundante,  se puede reducir y simplificar pero es más por ver el ejemplo de las condicionales
+            case "a":
+                        System.out.println("Asignaturas.");
+                        // 1ª
+                        System.out.println("Escriba el nombre de la asignatura 1: ");
+                        // Asignatura 1
+                        Scanner a1 = new Scanner(System.in);
+                        String asigA = a1.nextLine();
+                        if (asigA != null){
+                            // La media
+                            // 1
+                            System.out.println("Nota 1 examen: ");
+                            Scanner notaA1 = new Scanner(System.in);
+                            double nota1 = notaA1.nextDouble();
+                            // 2
+                            System.out.println("Nota 2 examen: ");
+                            Scanner notaA2 = new Scanner(System.in);
+                            double nota2;
+                            nota2 = notaA2.nextDouble();
+                            // media
+                            double mediaD = (( nota1 + nota2)/2);
+                            System.out.println("Media de las asignatura: " +  mediaD);
+                        }else{
+                            System.out.println("ERROR - No puede estár vacio");
+                        }
+                        // 2ª
+                        System.out.println("Escriba el nombre de la asignatura 2: ");
+                        Scanner a2 = new Scanner(System.in);
+                        String asigB = a2.nextLine();
+                        if (asigB != null){
+                            // La media
+                            // 1
+                            System.out.println("Nota 1 examen: ");
+                            Scanner notaB1 = new Scanner(System.in);
+                            double nota1 = notaB1.nextDouble();
+                            // 2
+                            System.out.println("Nota 2 examen: ");
+                            Scanner notaB2 = new Scanner(System.in);
+                            double nota2 = notaB2.nextDouble();
+                            // media
+                            double media = (( nota1 + nota2)/2);
+                            System.out.println("Media de las asignatura: " + media);
+                        }else{
+                            System.out.println("ERROR - No puede estár vacio");
+                        }
+                        break;
+            case "b":
+                        System.out.println("Escriba el número");
+                        Scanner num = new Scanner(System.in);
+                        float numero = num.nextFloat();
+                        double  sol = sin(numero);
+                        System.out.println("Seno de " + numero + " es: " + sol);
+                        break;
+            case "c":
+                        System.out.println("Escriba el número");
+                        Scanner nCos = new Scanner(System.in);
+                        float number = nCos.nextFloat();
+                        double  s = cos(number);
+                        System.out.println("Coseno de " + number + " es: " + s);
+                        break;
+            case "d":
+                        System.out.println("Escriba el número");
+                        Scanner nTang = new Scanner(System.in);
+                        float nro = nTang.nextFloat();
+                        double  resp = tan(nro);
+                        System.out.println("Tangente de " + nro + " es: " + resp);
+                        break;
+            case "s":
+                        System.out.println("Programa finalizado.");
+                        break;
+            default:
+                        System.out.println("................................................");
+                        System.out.println("Algo ha fallado .... Vuelve a intentarlo de nuevo");
+                        System.out.println("................................................");
+       }        
     }
 }
