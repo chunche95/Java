@@ -3,9 +3,7 @@ import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Operadores.
  */
 
 /**
@@ -14,7 +12,7 @@ import static java.lang.Math.sqrt;
  */
 public class OperadoresEnJava {
     public static void main(String[] args) {
-        int a = 365 , b = 12;
+        int a = 35 , b = 12;
         
         int suma = a+b;
         int resta = a-b;
@@ -31,16 +29,16 @@ public class OperadoresEnJava {
         /*
           * Incremento de variables.
         */
-        a += 1;
+        a += suma;
         System.out.println("a vale: " + a);
-        b *= 3;
+        b *= divide;
         System.out.println("b vale: " + b);
         
         /*
           *  Cálculo de operadores unarios
         */
          
-        b = a/9;
+        b = a/7;
         System.out.println("B:" + b +  " y a: " + a);
         
         boolean c = true;
@@ -64,8 +62,53 @@ public class OperadoresEnJava {
         double hipotenusa;
         double catetos = (pow(a,2)+pow(b,2));
         hipotenusa = sqrt(catetos);
-        System.out.println("Valores de los catetos: " + a + "\n" + b + "\n");
+        System.out.println("Valores de los catetos: \n A. " + a + "\n B. " + b + "\n");
         System.out.println("Resultado de la hipotenusa: " + hipotenusa);
+        
+        
+        /*
+          *     operadores de igualdad
+          *
+        */
+        System.out.println("..............................................................................");
+        System.out.println("Operadores de igualdad");
+        System.out.println("A " +a);
+        System.out.println("B " +b);
+        boolean comparar = (a == b);
+        System.out.println("Comparación: " +  comparar);
+        boolean compara = (a != b);
+        System.out.println("Comparación nueva: " + compara );
+        
+        // Comparación de Strings, a su vez, convertimos los Integer 'a' y 'b' en Strings con valueOf()
+        System.out.println("Comparación de Strings");
+        String cadena =  String.valueOf(a);
+        String cadena2 = String.valueOf(b);
+        System.out.println("Cadenas comparadas. Son iguales? " +  cadena.equals(cadena2));
+        
+        // Op. relacionales
+        boolean menorQue = a < b ;
+        boolean mayorQue = a > b ;
+        boolean menorIgualQue = a <= b;
+        boolean mayorIgualQue = a >= b;
+        System.out.println("Distintos: \n a menor que b " + menorQue + "  \n a mayor que b" + mayorQue );
+        System.out.println("a menor o igual que b: " + menorIgualQue);
+        System.out.println("a mayor o igual que b: " + mayorIgualQue);
+        
+        /*
+          * Comprobación de números pares e impares.
+        */
+        
+        if ( a % 2 == 0 ){
+            System.out.println(a + " - Número par");
+        }else{
+            System.out.println(a+ " -  Número impar");
+        }
+        if ( b % 2 == 0){
+            System.out.println(b + " - Número par");
+        }else{
+            System.out.println(b + " - Es impar");
+        }
+        
     }
     
 }
