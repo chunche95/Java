@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author pauli
  */
-public class Scanner {
+public class EscanerJava {
     public static void main(String[] args) {
         // Def escaner
         Scanner escanea = new Scanner(System.in);
