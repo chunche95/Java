@@ -6,6 +6,7 @@
  *
  * @author pauli
  */
+import com.sun.tools.jdeprscan.scan.Scan;
 import java.util.Random;
 public class OperacionesCondicionales {
     public static void main(String[] args) {
@@ -19,6 +20,8 @@ public class OperacionesCondicionales {
         Random numero1 = new Random(), valorMin = new Random(0) , valorMax = new Random(999);
         System.out.println("Valores iniciales. \n" +  numero1 + "\n" +  valorMin + "\n" +  valorMax);
         
+        System.out.println("..............................................");
+        
         // Declaración de valores random decimales
         int valor1 = numero1.nextInt(10)+1;
         int vMin = valorMin.nextInt(10)+1;
@@ -29,6 +32,8 @@ public class OperacionesCondicionales {
         boolean resultado1 = valor1 >= vMin || valor1 >= vMax;
         boolean resultado2 = valor1 >= vMin && valor1 >= vMax;
         System.out.println("Resultado1: " + resultado1 + "\nResultado2:"  + resultado2);
+        
+        System.out.println("..............................................");
         
         /*
           * Declaración de días libres de un trabajador usando operadores relacionales y valores RANDOM.
@@ -46,6 +51,7 @@ public class OperacionesCondicionales {
         }else{
             System.out.println("No puede, no tiene el día libre");
         }
+        System.out.println("..............................................");
         
         /*
           * Operadores ternarios (simplificacion del if else)
@@ -63,13 +69,25 @@ public class OperacionesCondicionales {
         System.out.println(vMin);
         System.out.println(vMax);
         
-        /*
-          * PRECEDENCIA de los operadores
-          */
+        System.out.println("..............................................");
         
-        valor1 = ++vMin + vMax--;
-        System.out.println("Nuevo valor: " +  valor1);
-        System.out.println(vMin);
-        System.out.println(vMax);
+       /* 
+         * Operación SWITCH
+        */
+        System.out.println("Menú de opciones.");
+        System.out.println("a. Cálcular la media de 2 asignaturas. ");
+        System.out.println("b. Cálculo del seno de un número. ");
+        System.out.println("c.  Cálculo del coseno de un número. ");
+        System.out.println("d. Cálculo de la tangente de un número. ");
+        Scan valor = new Scan();
+       switch ( opcion = valor){
+           case 'a':
+               
+               
+       }
+        
+        
+        
+        
     }
 }

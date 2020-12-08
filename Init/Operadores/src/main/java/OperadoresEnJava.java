@@ -109,6 +109,16 @@ public class OperadoresEnJava {
             System.out.println(b + " - Es impar");
         }
         
+         /*
+          * PRECEDENCIA de los operadores
+          */
+        int valor1 = (int) ((a + b ) / 2*b - 3*a );
+        int vMin = a, vMax = 1024/b;
+        System.out.println("Valores. " + valor1 +" " +  vMin + " " + vMax);
+        valor1 = ++vMax / vMin--;
+        System.out.println("Nuevo valor: " +  valor1);
+        System.out.println(vMin);
+        System.out.println(vMax);
     }
     
 }
