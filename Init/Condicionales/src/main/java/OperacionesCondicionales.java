@@ -31,7 +31,7 @@ public class OperacionesCondicionales {
         System.out.println("Resultado1: " + resultado1 + "\nResultado2:"  + resultado2);
         
         /*
-          * Declaración de días libres de un trabajador.
+          * Declaración de días libres de un trabajador usando operadores relacionales y valores RANDOM.
         */
         System.out.println("Bienvenido a sus días libres. \n ¿Librará?");
         
@@ -46,5 +46,17 @@ public class OperacionesCondicionales {
         }else{
             System.out.println("No puede, no tiene el día libre");
         }
+        
+        /*
+          * Operadores ternarios (simplificacion del if else)
+        */
+        // var r = (expresion) ? true : false;
+        boolean r = (3 < 2) ? true : false;
+        System.out.println("Resultado: " + r);
+        
+        String r2 = (valor1 <= vMin) ? "Sí" : "No";
+        String r3 = (valor1 <= vMax) ? "Sí" : "No";
+        System.out.println("El valor 1 (" +  valor1 + ") es menor o igual que valor mínimo (" + vMin + ") ? " + r2);
+        System.out.println("El valor 1 (" +  valor1 + ") es mayor o igual que valor máximo ("  +  vMax+ ") ?" +  r3);
     }
 }
