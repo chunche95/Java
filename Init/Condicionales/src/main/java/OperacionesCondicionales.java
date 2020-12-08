@@ -57,6 +57,19 @@ public class OperacionesCondicionales {
         String r2 = (valor1 <= vMin) ? "Sí" : "No";
         String r3 = (valor1 <= vMax) ? "Sí" : "No";
         System.out.println("El valor 1 (" +  valor1 + ") es menor o igual que valor mínimo (" + vMin + ") ? " + r2);
-        System.out.println("El valor 1 (" +  valor1 + ") es mayor o igual que valor máximo ("  +  vMax+ ") ?" +  r3);
+        System.out.println("El valor 1 (" +  valor1 + ") es mayor o igual que valor máximo ("  +  vMax+ ") ? " +  r3);
+        
+        System.out.println("Valor antes de la operación: " + valor1);
+        System.out.println(vMin);
+        System.out.println(vMax);
+        
+        /*
+          * PRECEDENCIA de los operadores
+          */
+        
+        valor1 = ++vMin + vMax--;
+        System.out.println("Nuevo valor: " +  valor1);
+        System.out.println(vMin);
+        System.out.println(vMax);
     }
 }
