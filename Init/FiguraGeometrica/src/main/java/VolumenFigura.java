@@ -17,5 +17,12 @@
  * @author pauli
  */
 public class VolumenFigura {
-    
+    public static void main(String[] args) {
+        /* Declaración de las variables de pruebas */
+        int ancho ,alto , largo ;
+        
+        Caja nuevaCaja1 = new Caja(ancho, alto, largo);
+        System.out.println("Volumen de la caja es: "+ alto + " X "+ ancho + " X "+ largo + " = "  );
+        System.out.println(nuevaCaja1.volumen());
+    }
 }
