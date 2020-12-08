@@ -166,6 +166,64 @@ public class OperacionesCondicionales {
                         System.out.println("................................................");
                         System.out.println("Algo ha fallado .... Vuelve a intentarlo de nuevo");
                         System.out.println("................................................");
-       }        
-    }
-}
+       }    
+        
+        
+        /*
+         * Convertir un número a texto
+         */
+        int n = 0;
+        String nTexto = "Nº desconocido";
+
+        switch (n) {
+            case 1: nTexto = "Número uno"; break;
+            case 2: nTexto = "Número dos"; break;
+            case 3: nTexto = "Número tres"; break;
+            case 4: nTexto = "Número cuatro"; break;
+            case 5: nTexto = "Número cinco"; break;
+            case 6: nTexto = "Número seis"; break;
+            case 7: nTexto = "Número siete"; break;
+            case 8: nTexto = "Número ocho"; break;
+            case 9: nTexto = "Número nueve"; break;
+            case 0: nTexto = "Número cero"; break;
+            default: nTexto = "No sé qué número es ... "; 
+        }
+        System.out.println("El número introducido es: " + n + " y en texo es: " + nTexto);
+        
+        /*
+           * Estaciones del año
+        */
+        
+        System.out.println("Escriba el mes del año (nombre o número del mes): ");
+        Scanner mes = new Scanner(System.in);
+        String mmes = mes.nextLine();
+        
+        switch(mmes){
+            case "Enero": case "enero": case "1":case "01":
+            case "Febrero": case "febrero": case "2":case "02":
+            case "Diciembre": case "diciembre": case "12":
+                System.out.println("Es Invierno");
+                break;
+            case "Marzo": case "marzo": case "3":case "03":
+            case "Abril": case "abril": case "4":case "04":
+            case "Mayo": case "mayo": case "5":case "05":
+                System.out.println("Es Primavera");
+                break;
+            case "Junio": case "junio": case "6":case "06":
+            case "Julio": case "julio": case "7":case "07":
+            case "Agosto": case "agosto": case "8":case "08":
+                System.out.println("Es Verano");
+                break;
+            case "Septiembre": case "septiembre": case "9":case "09":
+            case "Octubre": case "octubre": case "10":
+            case "Noviembre": case "noviembre": case "11":
+                System.out.println("Es Otoño");
+                break;
+            default: System.out.println("Fallo de entrada, vuelva a intentarlo");
+            
+            
+        }
+        
+        
+    } // public static void main    
+} // public class
