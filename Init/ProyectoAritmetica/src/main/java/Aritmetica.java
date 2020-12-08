@@ -8,6 +8,14 @@
  */
 public class Aritmetica {
     /*
+     * Constructor de la clase => Se llama igual que la clase
+    */
+    public Aritmetica(){
+        System.out.println("Ejecutando constructor vacío");
+    }
+    
+    
+    /*
      *  public int sumar(args)=> Firma del método
      *      - public => Modificador de acceso
      *      - int => Tipo de regreso
