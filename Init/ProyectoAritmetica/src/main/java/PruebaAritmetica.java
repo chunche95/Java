@@ -9,7 +9,7 @@
 public class PruebaAritmetica {
     
     public static void main(String[] args) {
-        // Creamos un objeto de tipo aritmetica
+        // Creamos un objeto de tipo aritmetica con valores por default
         Aritmetica aritmetica = new Aritmetica();
         
         // Inicializamos el constructor y asignamos los valores a los argumentos del método
