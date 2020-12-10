@@ -25,7 +25,6 @@ public class PruebaPersona {
         System.out.println("Persona = " + p.toString());        
         System.out.println("Mem. de p: " + p);
         
-        
         // Renovamos datos.
         p.setNombre("Maria");
         p.setSueldo(2010.5);
