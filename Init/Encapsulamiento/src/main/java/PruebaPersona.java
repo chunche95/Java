@@ -16,14 +16,15 @@ public class PruebaPersona {
         // Obtenemos informacion
         System.out.println("Nombre directora: " + p.getNombre() + "\t"+ p.getSueldo() + "\t"+ p.isEliminado());
         System.out.println("Mem. de p: " + p);
+        System.out.println("\n");
         // Modificamos informacion
         p.setEliminado(true);
         p.setSueldo(0);
         
         // Volvemos a imprimir la info anterior
-        System.out.println("Persona = " + p.toString());
-        
+        System.out.println("Persona = " + p.toString());        
         System.out.println("Mem. de p: " + p);
+        
         
         // Renovamos datos.
         p.setNombre("Maria");

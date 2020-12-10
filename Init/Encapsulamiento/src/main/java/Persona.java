@@ -45,11 +45,11 @@ public class Persona {
     }
     
     // Simplificando los  System.out.println en una línea     
-   /* 
+/* 
     public String toString(){
         return "Nombre: " + this.nombre +  ", sueldo:  " + this.sueldo + "€/br \t Eliminado: " + this.eliminado + "\n ································································ \n";
     }
-    */
+*/
 
     @Override // Sobreescritura de método
     public String toString() {
