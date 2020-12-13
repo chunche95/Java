@@ -19,11 +19,22 @@ public class EjHerencia {
         empleado1.setDir("Calle Falsa 123");
         System.out.println(empleado1);
         
+        System.out.println("\n");
+        
         Cliente cliente1 = new Cliente(new Date(), true);
         cliente1.setNom("Yaiza");
         cliente1.setEdad(25);
         cliente1.setGen('F');
         cliente1.setDir("Avda Constitución 54");
         System.out.println(cliente1);
+        
+        System.out.println("\n");
+        
+        Cliente cliente2 = new Cliente(new Date(), false);
+        cliente2.setNom("Ramón");
+        cliente2.setEdad(44);
+        cliente2.setGen('M');
+        cliente2.setDir("Avda Yucatán 74");
+        System.out.println(cliente2);
     }
 }
