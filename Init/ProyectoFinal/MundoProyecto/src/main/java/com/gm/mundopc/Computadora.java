@@ -67,6 +67,6 @@ public class Computadora {
 
     @Override
     public String toString() {
-        return "Computadora{ idComputadora=" + idComputadora + ", nombre=" + nombre + ", monitor=" + monitor + ", teclado=" + teclado + ", raton=" + raton + '}';
+        return "\nComputadora{ \t\nidComputadora=" + idComputadora + ",  \t\nnombre=" + nombre + ",  \t\nmonitor=" + monitor + ",  \t\nteclado=" + teclado + ",  \t\nraton=" + raton + '}';
     }
 }
