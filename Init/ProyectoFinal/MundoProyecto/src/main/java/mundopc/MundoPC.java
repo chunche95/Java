@@ -45,5 +45,25 @@ public class MundoPC {
         orden2.agregarComputadora(compuDell);
         System.out.println("");
         orden2.mostrarOrden();
+        
+        //Agregamos una segunda orden
+        Orden orden3 = new Orden();
+        orden3.agregarComputadora(compuDell);
+        orden3.agregarComputadora(compuDell);
+        orden3.agregarComputadora(compuDell);
+        orden3.agregarComputadora(compuDell);
+        orden3.agregarComputadora(compuDell);
+        orden3.agregarComputadora(compuDell);
+        System.out.println("");
+        orden3.mostrarOrden();
+        
+        //Agregamos una segunda orden
+        Orden orden4 = new Orden();
+        orden4.agregarComputadora(compuToshiba);
+        orden4.agregarComputadora(compuToshiba);
+        orden4.agregarComputadora(compuArmada);
+        System.out.println("");
+        orden4.mostrarOrden();
+        
     }
 }
