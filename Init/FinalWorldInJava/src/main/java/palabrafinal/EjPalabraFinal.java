@@ -11,7 +11,7 @@ package palabrafinal;
  */
 public class EjPalabraFinal {
     public static void main(String[] args) {
-        // Modificar atributo final
+        // Modificar el objeto final
         // ClaseFinal.VAR_PRIMITIVA = 20; - nO ME DEJA
         // ClaseFinal.VAR_PERSONA = new Persona(); - Tampoco puedo tocarlo
         System.out.println(ClaseFinal.VAR_PERSONA.getNombre());
