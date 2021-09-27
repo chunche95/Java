@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Java - Chunche95</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css?v=1.2" rel="stylesheet">
+		<link href="css/queries.css?v=1.2" rel="stylesheet">
+		<link rel="stylesheet" href="css/flexslider.css?v=1.2" type="text/css">
+		<link rel="stylesheet" href="css/animate.css" type="text/css">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="shortcut icon" href="img/main-logo.webp" type="image/x-icon">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="row">
+					<div class="responsive-logo"></div>
+					<div class="pullcontainer">
+						<a href="#" id="pull"><i class="fa fa-bars fa-2x"></i></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<nav>
+							<div class="logo-holder"></div>
+							<ul class="clearfix">
+								<li><a href="index.html">Home</a></li>
+								<li class="dot">.</li>
+								<li><a href="java.html" class="r_spacer">Co. Java</a></li>
+								<li><a href="intellij.html">Co. IntelliJ</a></li>
+								<li class="dot">.</li>
+								<li><a href="vs.html">Co. VS</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="hero"></div>
+		</header>
+		<div class="container-fluid intro" id="about">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<hr>
+					<h1 class="chain">Java básico. - Los conceptos claves que necesitas aprender.</h1>
+					<p>
+						<h2>¿Qué es un objeto?</h2>
+						<p>
+							<hr>
+							Un objeto en Java no es más ni menos que lo mismo que un objeto en el mundo real. No tiene existencia física (en el sentido de que no puedes tocarlo como puedes tocar una lámpara), pero sí existe como 'algo' 
+							que contiene información sobre sí mismo y sobre su estado, y con el que puedes interactuar. <br>
+							Por ejemplo, <i>la lámpara de la que hablamos. Es blanca y tiene un botón de encendido y apagado. Supongamos que está encendida.</i> <br>
+							Ahora, imagínate otra lámpara, igual que la anterior, que está a su lado. La única diferencia es que ésta es azul. Y está apagada. <br>							
+							Pues bien: si queremos crear un objeto de tipo <i>Lámpara</i> en Java, primero debemos crear un molde, donde vamos a especificar el comportamiento del objeto (cómo apagar y encender la lámpara), así como sus
+							características (el color de la lámpara). Utilizando este molde podremos producir tantos objetos de tipo <i>Lámpara</i> como lo permita  la memoria del dispositivo. A este molde se e denomina <b>clase</b> en Java. <br>
+							Una clase en Java es un molde, que permite crear un número ilimitado de objetos.
+						</p>
+						<h2>Propiedades de las clases</h2>
+						<p>
+							<ol>
+								<li>Un archivo <b>.java</b> puede contener un número ilimitado de clases.</li>
+								<li>De ese número ilimitado, solo una clase puede ser <i>public</i>. La <b>clase pública</b> ha de llamarse igual que el archivo que la contiene.</li>
+								<li>Una clase, sin ser pública, puede llamarse igual que en el archivo que la contiene.</li>
+								<li><b>No deben repertirse nombres</b> Cada clase ha de tener su propio nombre, distinto de los demás.</li>
+							</ol>
+							Empezamos creando la clase <b>Lampara</b>. 
+							<code>
+								<pre>
+package net.humancomputing;
+
+public class Lampara {
+	// Aquí el molde para crear las lámparas.
+
+}
+class LamparaCreator {
+	public static void main (String[] args) {
+		// En esta clase se van a crear las lámparas.
+
+	}
+}
+								</pre>
+							</code>
+							Como se puede apreciar, en un mismo archivo:
+							<ol type="bullet">
+								<li>Puede contener varias clases.</li>
+								<li>No es obligatorio que contenga una clase pública</li>
+								<li>Y, por último, una clase puede llamarse igual que el archivo que la contiene, sin ser pública.</li>
+							</ol>
+						</p>
+						<h2>Cómo crear o instanciar un objeto en Java.</h2>
+						<p>
+							Una vez que se ha creado la clase, ya puede crear o instanciar un objeto en Java. La <i>frase mágica</i> para instanciar un objeto contiene las siguientes partes: 
+							<code>
+								<pre>
+Lampara lampara = new Lampara();									
+								</pre>
+							</code>
+							<ol>
+								<li>En primer lugar, especificamos el tipo de objeto que estamos creando. Dicho de otro modo, especificamos qué clase estamos instanciando. Aquí, <b>Lampara</b>.</li>
+								<li>A continuación, la referencia al objeto, es decir, el nombre del objeto.</li>
+								<li>La palabra clave <i>new</i> (nuevo), que es la que se encarga de instanciar el objeto.</li>
+								<li>De nuevo, el tipo de la clase y un paréntesis.</li>
+								<li>El paréntesis se usa para introducir parámetros que sean necesarios para crear el objeto. Por ejemplo, si quiero crear una lámpara rosa, podría ser la palabra 'rosa'. 
+									Pero, para ello, debo de tener en la clase <b>Lampara</b> un constructor que acepte un parámetro de tipo String (texto entrecomillado). En nuestro ejemplo aún no lo tenemos, 
+									de manera que instanciar un objeto de tipo <b>Lampara</b> con parámetros no va a compilar.
+								</li>
+							</ol>
+							Antes de continuar, ten en cuenga en cuenta que esta referencia no es el objeto, sino que <b>apunta al objeto</b>. Podemos tener varias referencias apuntando al mismo objeto, por ejemplo:
+							Mi perro se llama 'Katan' pero dependiendo de la situación o la persona lo pueden llamar  de maneras diferentes, pueden ser 'el consentido de casa', 'perro', 'el labrador', 'can', 
+							<s>'chucho'</s> o 'cachorro', por ejemplo. Todas esas referencias apuntan a un mismo objeto 'mi perro que se llama Katan'.
+						</p>
+					</p>
+				</div>
+			</div>					
+		<footer id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 footer-leftcol">
+						<p><span class="bold-16p"><a href="https://humancomputing.net" target="_blank" rel="noopener noreferrer">Human Computig</a></span><br>
+						Extremadura, España<br>
+						Navalmoral de la Mata. <a href="mailto:paulino@humancomputing.net">paulino@humancomputing.net</a>
+						</p>
+					</div>
+					<div class="col-md-4 footer-midcol">
+						<ul>
+							<li><a href="#" class="twitter-icon">Twitter</a></li>
+							<li><a href="#" class="facebook-icon">Facebook</a></li>
+							<li><a href="#" class="pintrest-icon">Pintrest</a></li>
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-md-4 footer-rightcol">
+						<p>Designed by ♥️</p>
+						<p class="nopadding">Developed by <a href="http://designscrazed.org/">Peter</a>,
+						Written by <a href="https://humancomputing.net">Steve</a><p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.flexslider.js"></script>
+		<script src="js/scripts.js"></script>
+		<script src="js/modernizr.js"></script>
+		<script src="js/waypoints.min.js"></script>
+	</body>
+</html>
