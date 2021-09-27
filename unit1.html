@@ -115,7 +115,7 @@ Lampara lampara = new Lampara();
 								</li>
 							</ol>
 							Antes de continuar, ten en cuenga en cuenta que esta referencia no es el objeto, sino que <b>apunta al objeto</b>. Podemos tener varias referencias apuntando al mismo objeto, por ejemplo:
-							Mi perro se llama 'Katan' pero dependiendo de la situación o la persona lo pueden llamar  de maneras diferentes, pueden ser 'el consentido de casa', 'perro', 'el labrador', 'can', 
+							Mi perro se llama 'Katan' pero dependiendo de la situación o la persona lo pueden llamar  de maneras diferentes, pueden ser <b>'el consentido de casa'</b>, 'perro', 'el labrador', 'can', 
 							<s>'chucho'</s> o 'cachorro', por ejemplo. Todas esas referencias apuntan a un mismo objeto 'mi perro que se llama Katan'.
 						</p>
 						<h2>Diferencias entre objeto y referencia.</h2>
@@ -144,9 +144,32 @@ lampara = null;
 							<h3>¿Cuántos objetos de tipo <strong>Lampara</strong> se han creado?</h3>
 							<p>
 								En realidad, solo dos. 
-								Una <b>lampara</b> y <strong>lampara3</strong>
+								Una <b>lampara</b> y <strong>lampara3</strong> apuntan al mismo objeto; hasta la última línea, donde a <b>lampara</b> se le asigna el valor null (es decir, que no apunte a ningún objeto).
+							</p>
+							<h3>Siguiendo con el ejemplo de Katan...</h3>
+							<p>
+								... tendríamos a un perro que lo llamamos 'cachorro', ya que tiene 1 mesesito. <br>
+								Al tiempo, le adopto y le llama 'Katan'. A continuación, decido llevarlo a casa de la familia 
+								y a 'cachorro' lo vamos a llamar también 'el consentido de casa'. Así que tendríamos tres nombres ('cachorro', 'Katan' y 'el consentido de casa') que apuntan al mismo perro.
+								Al asignar el valor null a la primera asignación, tenemos que al perro ya sólo se le conocerá por 'Katan' o 'el consentido de casa'. <br>
+								Ya 'cachorro' deja de ser un nombre que haga referencia a el perro.
+							</p>
+							<h3>En resumen</h3>
+							<p>
+								<ul>
+									<li>
+										Una clase es un 'molde' para crear infinidad de objetos.
+									</li>
+									<li>
+										Ub objeto en Java, al igual que un objeto real, puede tener un comportamiento y características propias.
+									</li>
+									<li>
+										Cuando opera con un objeto en realidad lo hace a través de una referencia que apunta a dicho objeto, no con el objeto en sí. Recuerda, es como cuando usas el nombre 'Katan' para referirse a mi perro.
+									</li>
+								</ul>
 							</p>
 						</p>
+						<h2></h2>
 					</p> <!-- parrafo principal-->
 				</div>
 			</div>					
