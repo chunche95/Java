@@ -118,7 +118,36 @@ Lampara lampara = new Lampara();
 							Mi perro se llama 'Katan' pero dependiendo de la situación o la persona lo pueden llamar  de maneras diferentes, pueden ser 'el consentido de casa', 'perro', 'el labrador', 'can', 
 							<s>'chucho'</s> o 'cachorro', por ejemplo. Todas esas referencias apuntan a un mismo objeto 'mi perro que se llama Katan'.
 						</p>
-					</p>
+						<h2>Diferencias entre objeto y referencia.</h2>
+						<p>
+							En <b>Java</b> no tienes nunca acceso al objeto en sí, siempre vas a operar usando la referencia. Cuando un objeto se queda sin referencias que apunten a él (porque todas éstas apuntan a <i>null</i>
+							o a otro objeto), Java termina borrándolo de la memoria.
+							<ul>
+								<li>
+									El signo = asigna a la referencia el objeto que creamos. Es decir, que es como decir esta referencia apunta a este objeto. En Java, este signo no significa 'igual', sino que se usa para asignar 
+									un valor, en este caso, una referencia.
+								</li>
+								<li>
+									El signo para expresar igualdad es ==. No obstante, se usa para comparar dos referencias, lo que está haciendo  es comparando si ambas apuntan al mismo objeto o no, no está comparando la igualdad
+									de los objetos a los que apuntan.
+								</li>
+							</ul>
+							Puede asignarle a una referencia otro objeto ya creado, o null. <b>Null</b> significa que la referencia no apunta a ninguna parte. Es una etiqueta en el suelo, una vez ya arrancada.
+							<code>
+								<pre>
+Lampara lampara = new Lampara();
+Lampara lampara2 = new Lampara();
+Lampara lampara3 = lampara; 
+lampara = null;									
+								</pre>
+							</code>
+							<h3>¿Cuántos objetos de tipo <strong>Lampara</strong> se han creado?</h3>
+							<p>
+								En realidad, solo dos. 
+								Una <b>lampara</b> y <strong>lampara3</strong>
+							</p>
+						</p>
+					</p> <!-- parrafo principal-->
 				</div>
 			</div>					
 		<footer id="contact">
