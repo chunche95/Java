@@ -53,6 +53,7 @@
 					<hr>
 					<h1 class="chain">Java básico. - Los conceptos claves que necesitas aprender.</h1>
 					<p>
+						<!-- Qué es un objeto. -->
 						<h2>¿Qué es un objeto?</h2>
 						<p>
 							<hr>
@@ -174,21 +175,28 @@ package net.humancomputing
 public class Lampara { }
 class LamparaCreator { 
 	public static void main(String[] args) {
-		Lampara lampara = new Lampara();
-		Lampara lampara1 = new Lampara();
-		lampara = null;
-		Lampara lampara2 = new Lampara();
-		Lampara lampara3 = lampara;
-		lampara1 = lampara2;
-		lampara = new Lampara();
-		lampara3 = ampara2;
+		Lampara lampara = new Lampara();     // -> Crea una 'lampara'
+		Lampara lampara1 = new Lampara();    // -> Crea una 'lampara1'
+		lampara = null;                      // -> 'lampara' es null -> Desaparece
+		Lampara lampara2 = new Lampara();    // -> Crea una 'lampara2'
+		Lampara lampara3 = lampara;          // -> Crea una 'lampara3' = a 'lampara' y 'lampara' es null, entonces 'lampara3' no existe tampoco, es null también.
+		lampara1 = lampara2;                 // -> Copiamos la 'lampara2' en la 'lampara1', ya son iguales!
+		lampara = new Lampara();             // -> Crea una nueva 'lampara' 
+		lampara3 = lampara2;                  // -> Copiamos en 'lampara2' en la 'lampara3', ya son iguales! 
 	}
 }										
 									</pre>
 								</code>
 							</p>
 						</p>
-						<h2></h2>
+						<!-- Que es un constructor. -->
+						<h2>¿Qué es un constructor?</h2>
+						<p>
+							<h3>¿Qué diferencia hay entre un método y un constructor en Java?</h3>
+							<p>
+								Aunque son similares, tanto la función de un método como su signatura son diferentes a los de un constructor. Retomando el ejemplo de la lámpara.
+							</p>
+						</p>
 					</p> <!-- parrafo principal-->
 				</div>
 			</div>					
