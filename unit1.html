@@ -164,9 +164,28 @@ lampara = null;
 										Ub objeto en Java, al igual que un objeto real, puede tener un comportamiento y características propias.
 									</li>
 									<li>
-										Cuando opera con un objeto en realidad lo hace a través de una referencia que apunta a dicho objeto, no con el objeto en sí. Recuerda, es como cuando usas el nombre 'Katan' para referirse a mi perro.
+										Cuando opera con un objeto en realidad lo hace a través de una referencia que apunta a dicho objeto, no con el objeto en sí. Recuerda, es como cuando usas el nombre 'Katan' para referirte a mi perro.
 									</li>
 								</ul>
+								Vamos a hacer un pequeño código a continuación. 
+								<code>
+									<pre>
+package net.humancomputing
+public class Lampara { }
+class LamparaCreator { 
+	public static void main(String[] args) {
+		Lampara lampara = new Lampara();
+		Lampara lampara1 = new Lampara();
+		lampara = null;
+		Lampara lampara2 = new Lampara();
+		Lampara lampara3 = lampara;
+		lampara1 = lampara2;
+		lampara = new Lampara();
+		lampara3 = ampara2;
+	}
+}										
+									</pre>
+								</code>
 							</p>
 						</p>
 						<h2></h2>
