@@ -194,7 +194,33 @@ class LamparaCreator {
 						<p>
 							<h3>¿Qué diferencia hay entre un método y un constructor en Java?</h3>
 							<p>
-								Aunque son similares, tanto la función de un método como su signatura son diferentes a los de un constructor. Retomando el ejemplo de la lámpara.
+								Aunque son similares, tanto la función de un método como su signatura son diferentes a los de un constructor. Retomando el ejemplo de la lámpara. La clase <strong>Lampara</strong>.
+								<code>
+									<pre>
+package net.humancomputing
+public class Lampara {
+	private String color; 
+	public void Lampara (String color) {
+		this.color = color;
+	}
+}							
+class LamparaCreator {
+	public static void main(String[] args) {
+		Lampara lampara = new Lampara("roja");
+	}
+}			
+									</pre>
+								</code>
+								Al ejecutar el anterior código, <strong>Lampara(String color)</strong> es un método y no un constructor. <br>
+								<h4>¿Cuál es la diferencia?</h4>
+								<p>
+									<strong>Un constructor en Java nunca especifica un valor de devolución.</strong> Como puede ver, en el método del ejemplo se especifica <i>void</i>. Pues el hecho de que un método pueda tener el mismo 
+									nombre que la clase que lo contiene puede dar lugar a confusión. No es códigobien escrito, por confuso, pero es válido.
+								</p>
+								<h4>¿Qué es un constructor explícito?</h4>
+								<p>
+									Quizá recuerde que en la lección anterior se  
+								</p>
 							</p>
 						</p>
 					</p> <!-- parrafo principal-->
