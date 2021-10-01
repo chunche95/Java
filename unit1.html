@@ -284,6 +284,45 @@ class LamparaCreator {
 								<p>
 									En este otro caso, coexisten varios varios constructores al igual que en el caso anterior, pero cada uno requiere un parámetro más que el anterior. Así, si instancas un objeto con el menor 
 									número de parámetros posible, cada constructor va a inicializar una variable por sí mismo y va a enviar al siguiente constructor las variables ya inicializadas mediante la palabra clave <b>this()</b>.
+									<code>
+										Ej.2
+										<pre>
+package net.humancomputing;
+
+public class Lampara {
+	private String color;
+	private boolean encendida;
+	
+	public Lampara() {
+		this("gris");
+	}
+	public Lampara(String color) {
+		this(color, true);
+	}
+	public Lampara(String color, boolean estaEncendida) {
+		this.color = color;
+		this.encendida = estaEncendida;
+	}
+
+	@Override 
+	public String toString() {
+		return "La lampara es " + color + " y está encendida: " + encendida;
+	}
+}											
+class LamparaCreator {
+	public static void main (String[] args) {
+		Lampara lampara1 = new Lampara();
+		Lampara lampara2 = new Lampara("Blanca");
+		Lampara lampara3 = new Lampara("Azul", false);
+
+		System.out.println(lampara1);  // -> Lampara 1 es gris y está encendida: true.
+		System.out.println(lampara2);  // -> Lampara 2 es Blanca y está encendida: true.
+		System.out.println(lampara3);  // -> Lampara 3 es Azul y está encendida: false.
+	}
+}
+										</pre>
+									</code>
+									 ada vez que se ha instanciado un objeto de tipo Lampara, se ha introducido un parámetro nuevo. En el primer objeto se han usado los tres constructores; en el segundo, 
 								</p>
 							</p> <!-- Qué diferencia hay entre un método y un constructor en Java -->
 						</p>
