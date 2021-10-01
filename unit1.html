@@ -330,6 +330,66 @@ class LamparaCreator {
 									El constructor puede contener más código, pero this() ha de estar siempre en primer lugar. Además, this() solo se puede usar en un constructor, no en un método.
 								</p>
 								<h4>¿Si en lugar de this(), uso 'new' para instanciar un objeto usando el otro constructor?</h4>
+								<p>
+									Veamolo con un ejemplo. 
+									<code>
+										<pre>
+package net.humancomputing;
+
+public class Lampara { 
+	private String color;
+	private boolean encendida; 
+
+	public Lampara(String color, boolean encendida) {
+		this.color = color;
+		this.encendida = encendida;
+	}
+
+	public Lampara(boolean encendida, String color) {
+		this.color = color;
+		this.encendida = encendida;
+	}
+
+	@Override
+	public String toString() {
+		return "Lampara es de color: " + color + " y está encendida: " + encendida;
+	}
+}										
+
+class LamparaCreator {
+	public static void main(String[] args) {
+		Lampara lampara1 = new Lampara(true, "Amarilla");
+		Lampara lampara2 = new Lampara("Verde", false);
+
+		System.out.println(lampara1);
+		System.out.println(lampara2);
+	}
+}
+										</pre>
+									</code>
+									El resultado es muy distinto al anterior, al usar <b>new Lampara()</b>, lo que hacemos es crear otro objeto distinto, que de inmediato se descarta, ya que no se guarda en ninguna parte.
+									Así, en los dos primeros objetos instanciados sus variables toman los valores predeterminados (null y false), y es el tercer objeto el único que se instancia con los valores introducidos.
+								</p>
+								<h4>Constructores que requieren los mismos parámetros, pero en distinto orden.</h4>
+								<p>
+									Siempre y cuando los parámetros estén en distinto orden. 
+								</p>
+								<h4>Otras características del constructor en Java.</h4>
+								<p>
+									Los constructores pueden ser...
+									<ul>
+										<li>public</li>
+										<li>private</li>
+										<li>protected</li>
+									</ul>
+									No pueden ser ...
+									<ul>
+										<li>static</li>
+										<li>final</li>
+										<li>abstract</li>
+										<li>synchronized o native</li>
+									</ul>								
+								</p>
 							</p> <!-- Qué diferencia hay entre un método y un constructor en Java -->
 						</p>
 					</p> <!-- parrafo principal-->
