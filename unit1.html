@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Java - Chunche95</title>
+		<title>Java - Unit 1/6</title>
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/styles.css?v=1.2" rel="stylesheet">
@@ -171,7 +171,7 @@ lampara = null;
 								Vamos a hacer un pequeño código a continuación. 
 								<code>
 									<pre>
-package net.humancomputing
+package net.humancomputing;
 public class Lampara { }
 class LamparaCreator { 
 	public static void main(String[] args) {
@@ -197,7 +197,7 @@ class LamparaCreator {
 								Aunque son similares, tanto la función de un método como su signatura son diferentes a los de un constructor. Retomando el ejemplo de la lámpara. La clase <strong>Lampara</strong>.
 								<code>
 									<pre>
-package net.humancomputing
+package net.humancomputing;
 public class Lampara {
 	private String color; 
 	public void Lampara (String color) {
@@ -219,9 +219,73 @@ class LamparaCreator {
 								</p>
 								<h4>¿Qué es un constructor explícito?</h4>
 								<p>
-									Quizá recuerde que en la lección anterior se  
+									Quizá recuerde que en la lección anterior se planteó, como ejercicio, ver cuántos objetos se creaban en el código que se mostraba. Es posible que vieras que, aunque todo compilaba perfectamente, no había ningún 
+									constructor a la vista. Esto se debe a que una clase en Java siempre ha de tener un constructor. Así, sí tú no lo creas de manera explícita, la clase crea un constructor implícito, que ni acepta parámetros no realiza otra 
+									función más que la de instanciar los objetos. Una clase sin constructor es, pues, igual que una clase con el siguiente constructor:
+									<code>
+										<pre>
+package net.humancomputing;
+
+public class Lampara {
+	public Lampara() { }
+}
+										</pre>
+									</code>
+									Ten en cuenta que, en cuanto una clase contiene un constructor en Java, el constructor implícito deja de existir. Es decir, si el constructor de la clase <b>Lampara</b> tiene un parámetro, ya no podremos instanciar un objeto de tipo 
+									Lampara sin ningún parámetro, a no ser que creemos otro constructor que no acepte parámetros. 
+									<code>
+										<pre>
+package net.humancomputing;
+
+public class Lampara {
+	private String color;
+	public Lampara(String color) { 
+		this.color = color;
+	}
+}							
+
+class LamparaCreator {
+	public static void main(String[] args) {
+		Lampara lampara = new Lampara();
+	}
+}
+										</pre>
+									</code>
+									La clase con dos constructores compila y se ejecuta.
 								</p>
-							</p>
+								<h4>¿Cuántos constructores puede tener una clase?</h4>
+								<p>
+									El número de constructores que puede contener una clase Java es ilimitado, siempre y cuando su signatura<a href="https://es.wikipedia.org/wiki/Signatura_(inform%C3%A1tica)" target="_blank" rel="noopener noreferrer">*</a> sea distinta.
+									Es decir, han de ser constructores <b>sobrecargados</b>, que acepten distintos parámetros. Ejemplos:
+									<code> Ej.1
+										<pre>
+package net.humancomputing;
+
+public class Lampara {
+	private String color;
+	public Lampara(String color) { 
+		this.color = color;
+	}
+
+	public Lampara() { }
+}							
+
+class LamparaCreator {
+	public static void main(String[] args) {
+		Lampara lampara1 = new Lampara();
+		Lampara lampara2 = new Lampara("Azul");
+	}
+}
+										</pre>
+									</code>
+									En el caso del primer objeto instanciado, <b>lampara1</b>, la variable <b>color</b> toma el valor predeterminado que, en este caso (al ser String un objeto) es <b>null</b>.
+								</p>
+								<h4>Constructores en cascada</h4>
+								<p>
+									En este otro caso, coexisten varios varios constructores al igual que en el caso anterior, pero cada uno requiere un parámetro más que el anterior. Así, si instancas un objeto con el menor 
+									número de parámetros posible, cada constructor va a inicializar una variable por sí mismo y va a enviar al siguiente constructor las variables ya inicializadas mediante la palabra clave <b>this()</b>.
+								</p>
+							</p> <!-- Qué diferencia hay entre un método y un constructor en Java -->
 						</p>
 					</p> <!-- parrafo principal-->
 				</div>
