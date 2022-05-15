@@ -402,9 +402,221 @@ class LamparaCreator {
 							<h4>Crea un archivo .java que contenga la clase.</h4>
 							<p>
 								Una clase <strong>Java</strong> no es más que un molde o receta con el vamos a crear un esquema del objeto que quieres instanciar. <br>
-								Como nosotrso vamos a crear una lámpara, vamos a crear el archivo <b>Lampara.java</b>
-							</p> <!-- Crear archivo .java -->
+								Como nosotros vamos a crear una lámpara, vamos a crear el archivo <b>Lampara.java</b>
+								<code>
+									<pre>
+/*
+* Instanciar objetos
+*/
+package net.hc.instanciarobjetos;
+
+/**
+* @date 15 de mayo de 2022
+* @version  0.1
+* @author Paulino Esteban Bermúdez Rodríguez | humancomputing.net
+*/
+public class Lampara {
+	// Esta es la 'receta' para crear lámparas.
+}
+class LamparaCreator{
+	public static void main(String[] args) {
+		// En esta otra voy a crear las lámparas        
+	}
+}									   
+									</pre>
+								</code>
+								En este caso se ha creado dos clases, la que se va a instanciar (Lampara) y otra, LamparaCreator, desde la que se va a instanciar los objetos de tipo Lampara.
+								Puede ejecutar la clase: complia con normalidad e instancia un objeto, pero no hace nada más.						
+							</p> <!-- Crear archivo .java -->							
 						</p><!-- 1º crea tu  receta  -->
+						<h3>2º Define las características del objeto.</h3>
+						<p>
+							Vamos a crear lámparas que van a tener un color (ya sea el color que se introduzca al instanciar el objeto, o uno predeterminado) y que, por supuesto, se van a poder encender y apagar. <br>
+							En este paso voy a hacer uso de la encapsulación: es decir, las variables van a ser privadas y se va a acceder a ellas a través de métodos que han sido creados con este fin.
+							<code>
+								<pre>
+public class Lampara {
+	private String color;
+	private boolean encendida;
+}
+class LamparaCreator{
+	public static void main(String[] args) {
+		Lampara lampara = new Lampara();
+	}
+}									
+								</pre>
+							</code>
+							De nuevo, la clase compila y se instancia el objeto. Pero ¿qué hacemos con las variables? Hay que inicializarlas creando nuestro propio constructor.
+							<code>
+								<pre>
+public class Lampara {
+	private String color;
+	private boolean encendida;
+	
+	public Lampara(String color) {
+		this.color = color;
+	}
+	public Lampara(){
+		this("Azul");
+	}
+}
+class LamparaCreator{
+	public static void main(String[] args) {
+		Lampara lampara = new Lampara();
+	}
+}									
+								</pre>
+							</code>
+							Si se fija en el constructor, verá que, a la hora de instanciar, tenemos dos opciones. Por un lado, puede instanciar un objeto sin nigún parámetro. Esto quiere decir que uso el constructor que no admite parámetros 
+							que, a su vez, ejecuta el segundo constructor con el parámetro predeterminado "Azul". Por otro lado, también puede instanciar un objeto de tipo Lampara usando el color que se quiere. <br>
+							Además, verás que la variable  'encendida' se queda sin inicializar. Más adelante aprenderás el valor predeterminado de las variables de clase o instancia, en este caso, al ser un <i>boolean</i>, el valor predeterminado
+							es false. Es decir, de manera predeterminada la lámpara está apagada.
+						</p> <!-- 2º Características del objeto -->
+						<h3>3º Instanciar un objeto no es toda la historia: ¿y si quieres modificarlo?</h3>
+						<p>
+							<h4>No hay que olvidarse de la encapsulación.</h4>
+							<p>
+								Verás que las variables que definen el color y el estado (encendida/apagada) de la lámpara son privadas. El siguiente paso para aplicar el encapsulamiento consiste en crear unos métodos para acceder o modificar estas variables. 
+							</p>							
+							<h4>¿En qué consiste el encapsulamiento?</h4>
+							<p>
+								<ul>
+									<li>
+										Limita el acceso a las variables, tanto de instancia como de clase (estáticas) mediante la palabra clave <strong>private</strong>.
+									</li>
+									<li>
+										Crea métodos para acceder y/o modificar las variables. Por convención, el nombre del método que devuelve el valor de la variable comienza por get (o is si es una variable boolean); el nombre del método que establece un nuevo
+										un nuevo valor comienza por set.
+									</li>
+								</ul>
+								Quizá se pregunte por qué no se puede permitir el acceso directo a las variables. La respuesta es sencilla, si el acceso/modificación de las variables se realiza mediante un método, se puede controlar que el valor que se le vaya a asignar 
+								a la variable sea un valor válido.
+							</p>
+							<h4>Un ejemplo gráfico de encapsulamiento.</h4>
+							<p>
+								Supón que el objeto es una vivienda, y tú no tienes la llave. No obstante, dentro de la vivienda hay personas que van a realizar su solicitud.
+								Van a contestar a tus preguntas sobre el piso, y van a aceptar tus modificaciones, siempre y cuando se correspondan con un criterio predeterminado. Por ejemplo, no van a pintar las paredesdel piso de color negro, pero sí de azul celeste. 
+								Si tú tuvieras acceso al piso, podrías hacer y deshacer sin control, y romper o estropear cosas. <br>
+								En el caso del nuestro objetivo de tipo Lampara, el color de la lámpara no se va a poder modificar una vez instanciada, pero só se va a poder encender y apagar. 
+								<code>
+									<pre>
+public class Lampara {
+	private String color;
+	private boolean encendida;
+	/**
+		* El objeto de tipo Lampara puede instanciarse con un color elegido al 
+		* instanciarlo, o con el color "Azul" predeterminado.
+		* @param color 
+		*/
+	public Lampara(String color) {
+		this.color = color;
+	}
+	public Lampara(){
+		this("Azul");
+	}
+	public String getColor() {
+		return color;
+	}
+	/**
+		* Asigna a encendida el valor contrario al que posee
+		*/
+	public void interruptor(){
+		encendida = !encendida;
+		System.out.println("Lámpara: " + encendida);
+	}
+	public boolean isEncendida() {
+		return encendida;
+	}
+}
+class LamparaCreator{
+	public static void main(String[] args) {
+		Lampara lampara = new Lampara();
+		System.out.println(lampara.getColor() + " " + lampara.isEncendida()); // Azul y false
+		lampara.interruptor();
+		System.out.println(lampara.getColor() + " " + lampara.isEncendida()); // Azul y true
+		System.out.println(lampara); //Ubicacion en memoria del PC de Lampara
+	}
+}										
+									</pre>
+								</code>
+								Como ves, se agregó unas líneas más de código en el método <b>main</b> de la clase <b>LamparaCreator</b> para no solo instanciar un objeto, sino también para comprobar el color de la lámpara, para comprobar si está encendida o apagada y para 
+								cambiarle este último estado. <br>
+								En un inicio la lámpara está apagada (false); la segunda línea muestra el cambio de estado  y, al volver a imprimir el estado de la lámpara, vemos que está encendida (true). <br>
+								La última línea es el resultado de imprimir el objeto utilizando <strong>System.out.println(lampara);</strong>
+							</p>
+							<strong>Imprime el objeto que has instanciado</strong>.
+							<p>
+								Más adelante se hablará con más detalle de la herencia y del método <b>toString()</b>. <br>
+								Todos los objetos heredan de manera implícita de la clase Object, y heredan una serie de métodos de esta. Uno de ellos, el que voy a usar ahora, es <b>toString()</b>. <br>
+								Puedes ejecutar este método directamente, o de manera implícita, imprimiendo un objeto. Como has visto en el ejemplo anterior, si usas directamente el método que tu clase hereda de la clase Object (sin implicitar tu propia version de toString()), 
+								el resultado es poco intuitivo. Es por ello que es recomendable que implementes tu propia versión. <br>
+								<code>
+									<pre> <i>
+@Override
+public String toString() {
+	String onOff = encendida ? "ON" : "OFF";
+		return "La lámpara es " + color + " y está " + onOff;
+} </i>
+									</pre>
+								</code>
+								Queda como resultado:
+								<code>
+									<pre>
+/*
+* Instanciar objetos
+*/
+package net.hc.instanciarobjetos;
+/**
+* @date 15 de mayo de 2022
+* @version  0.1
+* @author Paulino Esteban Bermúdez Rodríguez | humancomputing.net
+*/
+public class Lampara {
+	private String color;
+	private boolean encendida;
+	/**
+	* El objeto de tipo Lampara puede instanciarse con un color elegido al 
+	* instanciarlo, o con el color "Azul" predeterminado.
+	* @param color 
+	*/
+	public Lampara(String color) {
+		this.color = color;
+	}
+	public Lampara(){
+		this("Azul");
+	}
+	public String getColor() {
+		return color;
+	}
+	/**
+	* Asigna a encendida el valor contrario al que posee
+	*/
+	public void interruptor(){
+		encendida = !encendida;
+		System.out.println("Lámpara: " + encendida);
+	}
+	public boolean isEncendida() {
+		return encendida;
+	}
+	@Override
+	public String toString() {
+		String oN_Off = encendida ? "ON":"OFF";
+		return "La lámpara es " + color + " y está " + oN_Off;
+	}
+}
+class LamparaCreator{
+	public static void main(String[] args) {
+		Lampara lampara = new Lampara();
+		System.out.println(lampara.getColor() + " " + lampara.isEncendida()); // Azul y false
+		lampara.interruptor();
+		System.out.println(lampara.getColor() + " " + lampara.isEncendida()); // Azul y true
+		System.out.println(lampara); // Ubicacion en memoria del PC de Lampara
+	}
+}
+									</pre>
+								</code>
+							</p>
+						</p>
 					</p> <!-- parrafo principal-->
 				</div>
 			</div>					
